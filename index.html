@@ -15,7 +15,7 @@
       justify-content: center;
       padding: 48px 20px;
     }
-    .container { max-width: 720px; width: 100%; }
+    .container { max-width: 760px; width: 100%; }
     header h1 { font-size: 28px; margin-bottom: 8px; }
     header p { color: #6b7280; margin-bottom: 32px; }
     .card {
@@ -28,11 +28,14 @@
     .card h2 { font-size: 18px; margin-bottom: 12px; }
     .card ul { list-style: none; }
     .card li {
-      padding: 10px 0;
+      padding: 12px 0;
       border-bottom: 1px solid #f0f2f5;
       color: #374151;
     }
     .card li:last-child { border-bottom: none; }
+    .card a { color: #2563eb; text-decoration: none; }
+    .card a:hover { text-decoration: underline; }
+    .meta { color: #6b7280; font-size: 13px; margin-top: 4px; }
     .tag {
       display: inline-block;
       font-size: 12px;
@@ -42,6 +45,17 @@
       padding: 2px 8px;
       margin-left: 8px;
     }
+    .flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-top: 12px;
+      font-size: 13px;
+      color: #374151;
+    }
+    .flow span { background: #f3f4f6; border-radius: 6px; padding: 4px 10px; }
+    .flow .arrow { background: none; color: #9ca3af; padding: 0; }
     footer { margin-top: 32px; color: #9ca3af; font-size: 13px; text-align: center; }
   </style>
 </head>
@@ -53,10 +67,21 @@
     </header>
 
     <section class="card">
-      <h2>作业目录</h2>
+      <h2>复杂系统工程 Complex Systems Engineering</h2>
       <ul>
-        <li>示例：自动控制原理 · 第一次作业 <span class="tag">待补充</span></li>
-        <li>示例：信号与系统 · 习题集 <span class="tag">待补充</span></li>
+        <li>
+          <a href="complex-systems/by-wire-chassis-platform.md">面向高级别自动驾驶的线控底盘平台 — 六层层级拆解</a>
+          <span class="tag">系统 Systems 层</span>
+          <div class="meta">所选系统位于系统层，向上补全任务、体系、整机要素，向下补全子系统与模块要素。</div>
+          <div class="flow">
+            <span>任务 Mission</span><span class="arrow">→</span>
+            <span>体系 SoS</span><span class="arrow">→</span>
+            <span>整机 Vehicles</span><span class="arrow">→</span>
+            <span>系统 Systems</span><span class="arrow">→</span>
+            <span>子系统 Sub-systems</span><span class="arrow">→</span>
+            <span>模块 Modules</span>
+          </div>
+        </li>
       </ul>
     </section>
 
